@@ -1,0 +1,26 @@
+f = open("testfile.txt", "w")
+f.write("Hello World\n")
+f.write("Python File Handling\n")
+f.close()
+print("--- Write mode (w) done ---")
+
+f = open("testfile.txt", "r")
+print("--- Read mode (r) ---")
+print(f.read())
+f.close()
+
+f = open("testfile.txt", "a")
+f.write("Appended line\n")
+f.close()
+print("--- Append mode (a) done ---")
+
+f = open("testfile.txt", "r+")
+print("--- Read+Write mode (r+) ---")
+print(f.read())
+f.write("Added via r+ mode\n")
+f.close()
+
+f = open("testfile.txt", "r")
+print("--- Final content ---")
+print(f.read())
+f.close()
